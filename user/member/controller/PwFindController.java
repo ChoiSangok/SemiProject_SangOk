@@ -11,9 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import user.member.service.face.MemberService;
 import user.member.service.impl.MemberServiceImpl;
 
-/**
- * Servlet implementation class PwFindController
- */
 @WebServlet("/pw/find")
 public class PwFindController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
