@@ -23,14 +23,12 @@ public class MypageOutDogController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		
 		String userid=(String)req.getSession().getAttribute("userid");
 		
 		//아이디 잘 가져오나 확인~
 		System.out.println(userid);
 		Dogout dogout = memberService.myPageDogOut(userid);	
 		System.out.println(dogout);
-
 		req.setAttribute("dogout", dogout);
 		//포워딩
 		req.getRequestDispatcher("/WEB-INF/views/user/member/myPageOutDog.jsp").forward(req, resp);
